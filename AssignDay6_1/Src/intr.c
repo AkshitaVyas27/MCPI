@@ -17,13 +17,13 @@ void SwitchInIt(void){
 	SYSCFG->EXTICR[0]&= ~(BV(3)|BV(2)|BV(1)|BV(0));
 	NVIC_EnableIRQ(EXTI0_IRQn);
 }
-int count=0;
+
 uint32_t SwitchExtiFlag=0;
 
 void EXTI0_IRQHandler(void)
 {
 	EXTI->PR |= BV(SWITCH_EXTI);
-	count++;
 	SwitchExtiFlag=1;
+
 }
 

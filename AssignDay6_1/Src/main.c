@@ -30,13 +30,14 @@ int main(void) {
 	SystemInit();
 	UartInit(9600);
 	SwitchInIt();
+	while(1){
 	while(SwitchExtiFlag==0)
 		;
-
+	count++;
 	UartPuts("Interrupt count is");
 	UartPutint(count);
 	SwitchExtiFlag=0;
-
+	}
 	return 0;
 
 }
