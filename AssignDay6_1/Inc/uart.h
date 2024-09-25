@@ -30,7 +30,6 @@ Date: Sep 23, 2024
 void UartInit(uint32_t baud);
 void UartPutch(uint8_t ch);
 void UartPuts(char str[]);
-void UartPutint(int count);
 uint8_t UartGetch(void);
 void UartGets(char str[]);
 

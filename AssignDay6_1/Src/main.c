@@ -27,16 +27,16 @@
 #endif
 
 int main(void) {
+	char str[32];
 	SystemInit();
 	UartInit(9600);
 	SwitchInIt();
 	while(1){
-	while(SwitchExtiFlag==0)
-		;
-	count++;
-	UartPuts("Interrupt count is");
-	UartPutint(count);
-	SwitchExtiFlag=0;
+		while(SwitchExtiFlag==0)
+			;
+		sprintf(str, "Count=%d\r\n", count);
+		UartPuts(str);
+		SwitchExtiFlag=0;
 	}
 	return 0;
 

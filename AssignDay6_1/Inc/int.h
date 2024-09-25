@@ -15,7 +15,7 @@
 
 void SwitchInIt(void);
 void EXTI0_IRQHandler(void);
-extern uint32_t SwitchExtiFlag;
+extern volatile uint32_t SwitchExtiFlag;
 extern int count;
 
 

@@ -18,12 +18,14 @@ void SwitchInIt(void){
 	NVIC_EnableIRQ(EXTI0_IRQn);
 }
 
-uint32_t SwitchExtiFlag=0;
+volatile uint32_t SwitchExtiFlag=0;
+int count = 0;
 
 void EXTI0_IRQHandler(void)
 {
 	EXTI->PR |= BV(SWITCH_EXTI);
 	SwitchExtiFlag=1;
 
+	count++;
 }
 

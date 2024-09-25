@@ -56,11 +56,3 @@ void UartGets(char str[]) {
 	str[i] = '\0';
 }
 
-  int count =0;
-void UartPutint(int count){
-char str[10];
-	sprintf(str," %d\n",count);
-
-	UartPuts(str);
-}
-
