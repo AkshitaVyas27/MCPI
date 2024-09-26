@@ -1,0 +1,6 @@
+../Inc/system_stm32f4xx.h:131:20:DelayMs	2
+../Src/i2c_lcd.c:10:6:WriteByteandCtrl	1
+../Src/i2c_lcd.c:18:6:WriteByte	1
+../Src/i2c_lcd.c:32:5:Lcd_InIt	2
+../Src/i2c_lcd.c:78:6:LCD_Puts	2
+../Src/i2c_lcd.c:87:6:LCD_scroll	1
